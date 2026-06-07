@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Yourvendor\AdminDashboard\Console\Commands;
+namespace Rabbanist\AdminDashboard\Console\Commands;
 
 use Illuminate\Console\Command;
 

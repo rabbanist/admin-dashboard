@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Yourvendor\AdminDashboard\Traits;
+namespace Rabbanist\AdminDashboard\Traits;
 
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Facades\Cache;
-use Yourvendor\AdminDashboard\Models\Privilege;
+use Rabbanist\AdminDashboard\Models\Privilege;
 
 trait HasPrivileges
 {

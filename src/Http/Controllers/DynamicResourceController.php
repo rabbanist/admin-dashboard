@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Yourvendor\AdminDashboard\Http\Controllers;
+namespace Rabbanist\AdminDashboard\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-use Yourvendor\AdminDashboard\Contracts\AuditLoggerInterface;
-use Yourvendor\AdminDashboard\Services\ResourceCrudService;
-use Yourvendor\AdminDashboard\Services\DynamicFormGenerator;
-use Yourvendor\AdminDashboard\Services\ResourceListBuilder;
+use Rabbanist\AdminDashboard\Contracts\AuditLoggerInterface;
+use Rabbanist\AdminDashboard\Services\ResourceCrudService;
+use Rabbanist\AdminDashboard\Services\DynamicFormGenerator;
+use Rabbanist\AdminDashboard\Services\ResourceListBuilder;
 
 class DynamicResourceController extends Controller
 {

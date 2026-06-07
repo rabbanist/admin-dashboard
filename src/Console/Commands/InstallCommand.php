@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Yourvendor\AdminDashboard\Console\Commands;
+namespace Rabbanist\AdminDashboard\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Artisan;
@@ -15,17 +15,14 @@ class InstallCommand extends Command
 {
     protected $signature = 'admin-dashboard:install
                             {--force : Overwrite existing published files}
-                            {--rollback : Revert installation steps}
-                            {--no-interaction : Run without prompts (useful for CI)}';
+                            {--rollback : Revert installation steps}';
 
     protected $description = 'Install Admin Dashboard package with publishing, migrations, and seeding';
 
     public function handle(): int
     {
         $this->info('Starting Admin Dashboard installation...');
-        $logPath = storage_path('logs/admin-dashboard-install.log');
-        Log::useFiles($logPath);
-        Log::info('--- Installation started at '.now());
+        Log::info('--- Admin Dashboard installation started at '.now());
 
         if ($this->option('rollback')) {
             return $this->rollback();
@@ -99,7 +96,7 @@ class InstallCommand extends Command
 
     protected function backupDatabase(): void
     {
-        if (! $this->option('no-interaction')) {
+        if ($this->input->isInteractive()) {
             if ($this->confirm('Create a database backup before migrations?', true)) {
                 $this->components->task('Creating DB backup...');
                 $process = Process::fromShellCommandline(
@@ -123,7 +120,7 @@ class InstallCommand extends Command
         Artisan::call('db:seed', ['--class' => 'RoleSeeder', '--force' => true]);
         $this->components->task('Seeding privileges...');
         Artisan::call('db:seed', ['--class' => 'PrivilegeSeeder', '--force' => true]);
-        if (! $this->option('no-interaction')) {
+        if ($this->input->isInteractive()) {
             if ($this->confirm('Create a default admin user now?', true)) {
                 Artisan::call('admin-dashboard:create-admin');
             }

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Yourvendor\AdminDashboard\Http\Controllers;
+namespace Rabbanist\AdminDashboard\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-use Yourvendor\AdminDashboard\Contracts\DashboardServiceInterface;
+use Rabbanist\AdminDashboard\Contracts\DashboardServiceInterface;
 
 class DashboardController extends Controller
 {

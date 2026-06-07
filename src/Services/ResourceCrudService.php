@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Yourvendor\AdminDashboard\Services;
+namespace Rabbanist\AdminDashboard\Services;
 
 use Illuminate\Support\Facades\Validator;
-use Yourvendor\AdminDashboard\Exceptions\AdminDashboardException;
+use Rabbanist\AdminDashboard\Exceptions\AdminDashboardException;
 
 class ResourceCrudService
 {

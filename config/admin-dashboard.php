@@ -39,7 +39,7 @@ return [
     'middleware' => [
         'web',
         'auth',
-        \Yourvendor\AdminDashboard\Http\Middleware\AdminAccessMiddleware::class,
+        \Rabbanist\AdminDashboard\Http\Middleware\AdminAccessMiddleware::class,
     ],
 
     /*

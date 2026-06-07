@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Yourvendor\AdminDashboard\Tests;
+namespace Rabbanist\AdminDashboard\Tests;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
@@ -17,7 +17,7 @@ class TestCase extends OrchestraTestCase
     protected function getPackageProviders($app)
     {
         return [
-            \Yourvendor\AdminDashboard\AdminDashboardServiceProvider::class,
+            \Rabbanist\AdminDashboard\AdminDashboardServiceProvider::class,
         ];
     }
 
@@ -40,14 +40,14 @@ class TestCase extends OrchestraTestCase
      */
     protected function actingAsAdmin()
     {
-        $adminRole = \Yourvendor\AdminDashboard\Models\Role::firstOrCreate([
+        $adminRole = \Rabbanist\AdminDashboard\Models\Role::firstOrCreate([
             'slug' => 'admin',
         ], [
             'name' => 'Admin',
             'description' => 'Admin role',
             'is_protected' => true,
         ]);
-        $admin = \Yourvendor\AdminDashboard\Models\User::factory()->create();
+        $admin = \Rabbanist\AdminDashboard\Models\User::factory()->create();
         $admin->roles()->attach($adminRole);
         $this->actingAs($admin);
         return $admin;

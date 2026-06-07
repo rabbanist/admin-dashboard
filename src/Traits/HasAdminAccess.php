@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Yourvendor\AdminDashboard\Traits;
+namespace Rabbanist\AdminDashboard\Traits;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Collection;
-use Yourvendor\AdminDashboard\Models\Privilege;
+use Rabbanist\AdminDashboard\Models\Privilege;
 
 /**
  * Add this trait to your User model to integrate with the admin dashboard

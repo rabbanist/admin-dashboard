@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Yourvendor\AdminDashboard\Policies;
+namespace Rabbanist\AdminDashboard\Policies;
 
 use Illuminate\Auth\Access\HandlesAuthorization;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Yourvendor\AdminDashboard\Models\Role;
+use Rabbanist\AdminDashboard\Models\Role;
 
 class RolePolicy
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Yourvendor\AdminDashboard\Services;
+namespace Rabbanist\AdminDashboard\Services;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;

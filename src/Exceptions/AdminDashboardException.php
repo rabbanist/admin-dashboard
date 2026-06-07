@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Yourvendor\AdminDashboard\Exceptions;
+namespace Rabbanist\AdminDashboard\Exceptions;
 
 use RuntimeException;
 

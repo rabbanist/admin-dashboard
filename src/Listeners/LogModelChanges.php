@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Yourvendor\AdminDashboard\Listeners;
+namespace Rabbanist\AdminDashboard\Listeners;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
-use Yourvendor\AdminDashboard\Contracts\AuditLoggerInterface;
+use Rabbanist\AdminDashboard\Contracts\AuditLoggerInterface;
 
 class LogModelChanges
 {
@@ -49,7 +49,7 @@ class LogModelChanges
         }
 
         // Don't log changes to the audit log table itself (prevents recursion).
-        if ($model instanceof \Yourvendor\AdminDashboard\Models\AuditLog) {
+        if ($model instanceof \Rabbanist\AdminDashboard\Models\AuditLog) {
             return;
         }
 

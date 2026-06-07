@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use Illuminate\Support\Facades\Route;
-use Yourvendor\AdminDashboard\Http\Controllers\DashboardController;
+use Rabbanist\AdminDashboard\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +15,7 @@ use Yourvendor\AdminDashboard\Http\Controllers\DashboardController;
 |
 */
 
-use Yourvendor\AdminDashboard\Http\Controllers\UserController;
+use Rabbanist\AdminDashboard\Http\Controllers\UserController;
 
 Route::get('/', [DashboardController::class, 'index'])
     ->name('dashboard');
@@ -32,15 +32,15 @@ Route::prefix('users')->name('users.')->group(function () {
 
 Route::resource('users', UserController::class);
 
-use Yourvendor\AdminDashboard\Http\Controllers\RoleController;
-use Yourvendor\AdminDashboard\Http\Controllers\PrivilegeController;
+use Rabbanist\AdminDashboard\Http\Controllers\RoleController;
+use Rabbanist\AdminDashboard\Http\Controllers\PrivilegeController;
 
 Route::get('roles/{role}/users', [RoleController::class, 'assignUsers'])->name('roles.assign-users');
 Route::post('roles/{role}/users', [RoleController::class, 'syncUsers'])->name('roles.sync-users');
 Route::resource('roles', RoleController::class);
 Route::resource('privileges', PrivilegeController::class);
 
-use Yourvendor\AdminDashboard\Http\Controllers\DynamicResourceController;
+use Rabbanist\AdminDashboard\Http\Controllers\DynamicResourceController;
 
 Route::get('resources/{resource}/export', [DynamicResourceController::class, 'export'])->name('resources.export');
 Route::post('resources/{resource}/bulk', [DynamicResourceController::class, 'bulkAction'])->name('resources.bulk');

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Yourvendor\AdminDashboard\Facades;
+namespace Rabbanist\AdminDashboard\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use Yourvendor\AdminDashboard\Contracts\DashboardServiceInterface;
+use Rabbanist\AdminDashboard\Contracts\DashboardServiceInterface;
 
 /**
  * @method static string title()
@@ -16,7 +16,7 @@ use Yourvendor\AdminDashboard\Contracts\DashboardServiceInterface;
  * @method static string uploadPath()
  * @method static array  config()
  *
- * @see \Yourvendor\AdminDashboard\Services\DashboardService
+ * @see \Rabbanist\AdminDashboard\Services\DashboardService
  */
 class AdminDashboard extends Facade
 {

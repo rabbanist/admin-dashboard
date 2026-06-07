@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Yourvendor\AdminDashboard\Services;
+namespace Rabbanist\AdminDashboard\Services;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
-use Yourvendor\AdminDashboard\Models\Role;
-use Yourvendor\AdminDashboard\Exceptions\AdminDashboardException;
+use Rabbanist\AdminDashboard\Models\Role;
+use Rabbanist\AdminDashboard\Exceptions\AdminDashboardException;
 
 class RoleService
 {

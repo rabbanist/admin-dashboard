@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Yourvendor\AdminDashboard\Traits;
+namespace Rabbanist\AdminDashboard\Traits;
 
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
-use Yourvendor\AdminDashboard\Models\Role;
+use Rabbanist\AdminDashboard\Models\Role;
 
 trait HasRoles
 {

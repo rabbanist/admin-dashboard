@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Yourvendor\AdminDashboard\Services;
+namespace Rabbanist\AdminDashboard\Services;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
-use Yourvendor\AdminDashboard\Contracts\AuditLoggerInterface;
-use Yourvendor\AdminDashboard\Models\AuditLog;
+use Rabbanist\AdminDashboard\Contracts\AuditLoggerInterface;
+use Rabbanist\AdminDashboard\Models\AuditLog;
 
 class AuditLogger implements AuditLoggerInterface
 {

@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Yourvendor\AdminDashboard\Http\Controllers;
+namespace Rabbanist\AdminDashboard\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-use Yourvendor\AdminDashboard\Contracts\AuditLoggerInterface;
-use Yourvendor\AdminDashboard\Models\Privilege;
-use Yourvendor\AdminDashboard\Services\PrivilegeService;
+use Rabbanist\AdminDashboard\Contracts\AuditLoggerInterface;
+use Rabbanist\AdminDashboard\Models\Privilege;
+use Rabbanist\AdminDashboard\Services\PrivilegeService;
 
 class PrivilegeController extends Controller
 {

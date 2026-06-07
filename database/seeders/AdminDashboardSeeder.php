@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Yourvendor\AdminDashboard\Database\Seeders;
+namespace Rabbanist\AdminDashboard\Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Yourvendor\AdminDashboard\Models\Privilege;
-use Yourvendor\AdminDashboard\Models\Role;
+use Rabbanist\AdminDashboard\Models\Privilege;
+use Rabbanist\AdminDashboard\Models\Role;
 
 class AdminDashboardSeeder extends Seeder
 {

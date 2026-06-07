@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Yourvendor\AdminDashboard\Database\Factories;
+namespace Rabbanist\AdminDashboard\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Yourvendor\AdminDashboard\Models\AuditLog;
+use Rabbanist\AdminDashboard\Models\AuditLog;
 
 /**
  * @extends Factory<AuditLog>

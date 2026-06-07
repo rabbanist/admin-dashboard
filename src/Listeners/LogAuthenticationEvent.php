@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Yourvendor\AdminDashboard\Listeners;
+namespace Rabbanist\AdminDashboard\Listeners;
 
 use Illuminate\Auth\Events\Failed;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Auth\Events\Logout;
 use Illuminate\Support\Facades\Log;
-use Yourvendor\AdminDashboard\Contracts\AuditLoggerInterface;
+use Rabbanist\AdminDashboard\Contracts\AuditLoggerInterface;
 
 class LogAuthenticationEvent
 {

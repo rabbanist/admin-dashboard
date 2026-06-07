@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Yourvendor\AdminDashboard\Database\Factories;
+namespace Rabbanist\AdminDashboard\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
-use Yourvendor\AdminDashboard\Models\Privilege;
+use Rabbanist\AdminDashboard\Models\Privilege;
 
 /**
  * @extends Factory<Privilege>

@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Yourvendor\AdminDashboard\Http\Middleware;
+namespace Rabbanist\AdminDashboard\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Symfony\Component\HttpFoundation\Response;
-use Yourvendor\AdminDashboard\Contracts\AuditLoggerInterface;
+use Rabbanist\AdminDashboard\Contracts\AuditLoggerInterface;
 
 class CheckAdminAccess
 {

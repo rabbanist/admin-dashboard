@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Yourvendor\AdminDashboard\Services;
+namespace Rabbanist\AdminDashboard\Services;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Storage;
-use Yourvendor\AdminDashboard\Exceptions\AdminDashboardException;
+use Rabbanist\AdminDashboard\Exceptions\AdminDashboardException;
 
 class DynamicFormGenerator
 {
@@ -73,7 +73,7 @@ class DynamicFormGenerator
         $modelClass = class_exists($modelName) ? $modelName : "\\App\\Models\\{$modelName}";
 
         if (! class_exists($modelClass)) {
-            $modelClass = "\\Yourvendor\\AdminDashboard\\Models\\{$modelName}";
+            $modelClass = "\\Rabbanist\AdminDashboard\\Models\\{$modelName}";
         }
 
         if (! class_exists($modelClass)) {

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Yourvendor\AdminDashboard\Console\Commands;
+namespace Rabbanist\AdminDashboard\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
-use Yourvendor\AdminDashboard\Models\Role;
+use Rabbanist\AdminDashboard\Models\Role;
 use App\Models\User; // Assuming default user model
 
 class CreateAdminCommand extends Command
@@ -15,8 +15,7 @@ class CreateAdminCommand extends Command
     protected $signature = 'admin-dashboard:create-admin
                             {--name= : Admin name}
                             {--email= : Admin email}
-                            {--password= : Admin password}
-                            {--no-interaction : Run without prompts}';
+                            {--password= : Admin password}';
 
     protected $description = 'Interactively create a default admin user for Admin Dashboard';
 

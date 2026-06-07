@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Yourvendor\AdminDashboard\Http\Requests;
+namespace Rabbanist\AdminDashboard\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 

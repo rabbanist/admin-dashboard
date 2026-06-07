@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Yourvendor\AdminDashboard;
+namespace Rabbanist\AdminDashboard;
 
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Routing\Router;
@@ -10,22 +10,22 @@ use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\ServiceProvider;
-use Yourvendor\AdminDashboard\Console\Commands\InstallCommand;
-use Yourvendor\AdminDashboard\Console\Commands\PublishCommand;
-use Yourvendor\AdminDashboard\Contracts\AuditLoggerInterface;
-use Yourvendor\AdminDashboard\Contracts\DashboardServiceInterface;
-use Yourvendor\AdminDashboard\Http\Middleware\CheckAdminAccess;
-use Yourvendor\AdminDashboard\Http\Middleware\CheckPrivilege;
-use Yourvendor\AdminDashboard\Http\Middleware\LogAdminActivity;
-use Yourvendor\AdminDashboard\Listeners\LogAuthenticationEvent;
-use Yourvendor\AdminDashboard\Listeners\LogModelChanges;
-use Yourvendor\AdminDashboard\Models\Privilege;
-use Yourvendor\AdminDashboard\Models\Role;
-use Yourvendor\AdminDashboard\Policies\PrivilegePolicy;
-use Yourvendor\AdminDashboard\Policies\RolePolicy;
-use Yourvendor\AdminDashboard\Policies\UserPolicy;
-use Yourvendor\AdminDashboard\Services\AuditLogger;
-use Yourvendor\AdminDashboard\Services\DashboardService;
+use Rabbanist\AdminDashboard\Console\Commands\InstallCommand;
+use Rabbanist\AdminDashboard\Console\Commands\PublishCommand;
+use Rabbanist\AdminDashboard\Contracts\AuditLoggerInterface;
+use Rabbanist\AdminDashboard\Contracts\DashboardServiceInterface;
+use Rabbanist\AdminDashboard\Http\Middleware\CheckAdminAccess;
+use Rabbanist\AdminDashboard\Http\Middleware\CheckPrivilege;
+use Rabbanist\AdminDashboard\Http\Middleware\LogAdminActivity;
+use Rabbanist\AdminDashboard\Listeners\LogAuthenticationEvent;
+use Rabbanist\AdminDashboard\Listeners\LogModelChanges;
+use Rabbanist\AdminDashboard\Models\Privilege;
+use Rabbanist\AdminDashboard\Models\Role;
+use Rabbanist\AdminDashboard\Policies\PrivilegePolicy;
+use Rabbanist\AdminDashboard\Policies\RolePolicy;
+use Rabbanist\AdminDashboard\Policies\UserPolicy;
+use Rabbanist\AdminDashboard\Services\AuditLogger;
+use Rabbanist\AdminDashboard\Services\DashboardService;
 
 class AdminDashboardServiceProvider extends ServiceProvider
 {
@@ -110,7 +110,7 @@ class AdminDashboardServiceProvider extends ServiceProvider
             ->group([
                 'prefix'     => config('admin-dashboard.route_prefix', 'admin'),
                 'middleware'  => config('admin-dashboard.middleware', ['web', 'auth']),
-                'namespace'  => 'Yourvendor\\AdminDashboard\\Http\\Controllers',
+                'namespace'  => 'Rabbanist\AdminDashboard\\Http\\Controllers',
                 'as'         => 'admin.',
                 'domain'     => config('admin-dashboard.route_domain'),
             ], $routeFile);
@@ -300,7 +300,7 @@ class AdminDashboardServiceProvider extends ServiceProvider
         $this->commands([
             InstallCommand::class,
             PublishCommand::class,
-            \Yourvendor\AdminDashboard\Console\Commands\CreateAdminCommand::class,
+            \Rabbanist\AdminDashboard\Console\Commands\CreateAdminCommand::class,
         ]);
     }
 }

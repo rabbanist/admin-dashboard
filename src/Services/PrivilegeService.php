@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Yourvendor\AdminDashboard\Services;
+namespace Rabbanist\AdminDashboard\Services;
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
-use Yourvendor\AdminDashboard\Models\Privilege;
+use Rabbanist\AdminDashboard\Models\Privilege;
 
 class PrivilegeService
 {

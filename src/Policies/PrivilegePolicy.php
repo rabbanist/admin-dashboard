@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Yourvendor\AdminDashboard\Policies;
+namespace Rabbanist\AdminDashboard\Policies;
 
 use Illuminate\Auth\Access\HandlesAuthorization;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Yourvendor\AdminDashboard\Models\Privilege;
+use Rabbanist\AdminDashboard\Models\Privilege;
 
 class PrivilegePolicy
 {

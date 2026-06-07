@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Yourvendor\AdminDashboard\Http\Controllers;
+namespace Rabbanist\AdminDashboard\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
-use Yourvendor\AdminDashboard\Contracts\AuditLoggerInterface;
-use Yourvendor\AdminDashboard\Http\Requests\StoreUserRequest;
-use Yourvendor\AdminDashboard\Http\Requests\UpdateUserRequest;
-use Yourvendor\AdminDashboard\Models\Role;
-use Yourvendor\AdminDashboard\Models\Privilege;
-use Yourvendor\AdminDashboard\Models\AuditLog;
+use Rabbanist\AdminDashboard\Contracts\AuditLoggerInterface;
+use Rabbanist\AdminDashboard\Http\Requests\StoreUserRequest;
+use Rabbanist\AdminDashboard\Http\Requests\UpdateUserRequest;
+use Rabbanist\AdminDashboard\Models\Role;
+use Rabbanist\AdminDashboard\Models\Privilege;
+use Rabbanist\AdminDashboard\Models\AuditLog;
 
 class UserController extends Controller
 {

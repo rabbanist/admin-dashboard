@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Yourvendor\AdminDashboard\Models;
+namespace Rabbanist\AdminDashboard\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Yourvendor\AdminDashboard\Database\Factories\PrivilegeFactory;
+use Rabbanist\AdminDashboard\Database\Factories\PrivilegeFactory;
 
 class Privilege extends Model
 {

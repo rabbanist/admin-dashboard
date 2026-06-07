@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Yourvendor\AdminDashboard\Contracts;
+namespace Rabbanist\AdminDashboard\Contracts;
 
 interface AuditLoggerInterface
 {

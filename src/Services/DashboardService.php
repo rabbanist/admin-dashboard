@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Yourvendor\AdminDashboard\Services;
+namespace Rabbanist\AdminDashboard\Services;
 
-use Yourvendor\AdminDashboard\Contracts\DashboardServiceInterface;
+use Rabbanist\AdminDashboard\Contracts\DashboardServiceInterface;
 
 class DashboardService implements DashboardServiceInterface
 {
