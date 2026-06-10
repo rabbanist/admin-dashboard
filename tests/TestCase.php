@@ -53,4 +53,3 @@ class TestCase extends OrchestraTestCase
         return $admin;
     }
 }
-?>

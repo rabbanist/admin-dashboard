@@ -109,8 +109,8 @@ class AdminDashboardServiceProvider extends ServiceProvider
         $this->app->make(Router::class)
             ->group([
                 'prefix'     => config('admin-dashboard.route_prefix', 'admin'),
-                'middleware'  => config('admin-dashboard.middleware', ['web', 'auth']),
-                'namespace'  => 'Rabbanist\AdminDashboard\\Http\\Controllers',
+                'middleware'  => config('admin-dashboard.middleware', ['web', 'admin.access']),
+                'namespace'  => 'Rabbanist\AdminDashboard\Http\Controllers',
                 'as'         => 'admin.',
                 'domain'     => config('admin-dashboard.route_domain'),
             ], $routeFile);

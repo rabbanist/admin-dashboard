@@ -39,9 +39,14 @@ class CheckAdminAccess
                 ], 401);
             }
 
-            return redirect()->guest(
-                route('login', ['intended' => $request->fullUrl()])
-            );
+            // Gracefully handle missing 'login' named route.
+            try {
+                $loginUrl = route('login', ['intended' => $request->fullUrl()]);
+            } catch (\Throwable) {
+                $loginUrl = url('/login');
+            }
+
+            return redirect()->guest($loginUrl);
         }
 
         // ── 2. Suspension check ──────────────────────────────────────
